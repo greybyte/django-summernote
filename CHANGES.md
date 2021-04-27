@@ -1,6 +1,7 @@
 0.8.18.0 (WIP)
 --------
  - Bump Summernote to 0.8.18
+ - Drop support for Python 2
 
 0.8.11.6
 --------

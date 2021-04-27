@@ -1,15 +1,14 @@
-sudo: false
-dist: xenial
+os: linux
+dist: focal
 language: python
 python:
-  - "2.7"
-  - "3.5"
   - "3.6"
   - "3.7"
   - "3.8"
+  - "3.9"
 install:
-    - pip install -q -U pip tox tox-travis python-coveralls
+  - pip install -q -U pip tox tox-travis
 script:
   - tox
 after_success:
-  - coveralls
+  - bash <(curl -s https://codecov.io/bash)

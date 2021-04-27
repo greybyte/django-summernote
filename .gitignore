@@ -52,5 +52,10 @@ venv
 djs_playground/media
 djs_playground/static
 
-# codemirror
+# Misc
+.envrc
+.tool-versions
+.direnv
+
+# keep codemirror until we find a better solution
 !django_summernote/static/codemirror*/lib/

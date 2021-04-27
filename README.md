@@ -56,12 +56,7 @@ SETUP
 
      - Please, read the [official v3.0 documentation](https://docs.djangoproject.com/en/3.0/topics/files/) for more details on file uploads.
 
-5. If you're using Django 3.x with default SummernoteWidget, then
-
-     - Do not forget to set `X_FRAME_OPTIONS = 'SAMEORIGIN'` in your django settings.
-     - [Clickjacking Protection](https://docs.djangoproject.com/en/3.0/ref/clickjacking/)
-
-6. Run database migration for preparing attachment model.
+5. Run database migration for preparing attachment model.
 
        python manage.py migrate
 
@@ -144,7 +139,7 @@ And for `ModelForm`,
 
 ```python
 class FormForSomeModel(forms.ModelForm):
-    foo = SummernoteFormField()
+    foo = SummernoteTextField()
 ```
 
 THEMES
@@ -194,7 +189,7 @@ SUMMERNOTE_CONFIG = {
 
         # Use proper language setting automatically (default)
         'lang': None,
-        
+
         # Toolbar customization
         # https://summernote.org/deep-dive/#custom-toolbar-popover
         'toolbar': [
@@ -312,7 +307,7 @@ Run `tox`. If you don't have it, just `pip install tox`
 
 You can also run test with only specified targets.
 ```
-$ tox -e py27-dj111, py38-dj301
+$ tox -e py35-dj111, py38-dj301
 ```
 
 
